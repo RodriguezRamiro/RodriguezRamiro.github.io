@@ -24,6 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Back to family tree
     document.getElementById('back-to-tree').addEventListener('click', () => {
-        window.location.href = '/GenusTreeLink_Folder/GenusTreeLink.index.html';
+        window.location.href = '/GenusTreeLink.index.html';
     });
 });

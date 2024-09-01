@@ -4,20 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
-    <link rel="stylesheet" href="TreeLinkprofile.css">
+    <link rel="stylesheet" href="GenusTreeLinkProfile.css">
+<!-- Nav -->
+<nav id="nav">
+    <ul>
+        <li class="current"><a href="/Devs_Portfolio.index.html">Welcome</a></li>
+        <li>
+            <a href="#">Dropdown</a>
+            <ul>
+                <li><a href="#">link 1</a></li>
+                <li><a href="#">link 2</a></li>
+                <li>
+                    <a href="#">Link 3</a>
+                    <ul>
+                        <li><a href="#">SubLink 1</a></li>
+                        <li><a href="#">SubLink 2</a></li>
+                        <li><a href="#">SubLink 3</a></li>
+                        <li><a href="#">SubLink 4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </li>
+        <!--
+        <li><a href="left-sidebar.html">Left Sidebar</a></li>
+        <li><a href="right-sidebar.html">Right Sidebar</a></li>
+        <li><a href="no-sidebar.html">No Sidebar</a></li>
+        -->
+    </ul>
+</nav>
+
 </head>
 <body>
-    <div class="container">
+    <div class="user-profile">
         <h1 id="profile-name">User Profile</h1>
-        <div class="profile-info">
-            <img id="profile-image" src="" alt="User Image" class="node-image">
+        <div class="user-details">
+            <img src="https://img.icons8.com/quill/100/name.png" href="https://icons8.com/icon/16cSlppPLXYA/avatar" class="profile-pic">
             <div id="achievements">
+                <h1 class="user-name">John Doe</h1>
                 <h2>Achievements</h2>
+                <p class="user-birthdate"><strong>Birthdate:</strong> January 1, 1970</p>
+                <p class="user-bio"><strong>Biography:</strong> John Doe is a loving father of three. He enjoys gardening, reading, and spending time with his family.</p>
+                <p class="user-relation"><strong>Relationship:</strong> Father of Jane Doe, Grandfather of Alice Smith</p>
+                <p class="user-contact"><strong>Contact Information:</strong></p>
                 <textarea id="achievements-text" rows="10" placeholder="Add achievements here..."></textarea>
                 <button id="save-achievements">Save Achievements</button>
+                <ul>
+                    <li>Email: john.doe@example.com</li>
+                    <li>Phone: (555) 123-4567</li>
+                </ul>
             </div>
         </div>
-        <button id="TreeLink.index.html">Back to Family Tree</button>
+        <button id="/GenusTreeLink.index.html">Back to Family Tree</button>
     </div>
     <script src="/GenusTreeLink_Folder/GenusTreeLinkProfile.js"></script>
 </body>
