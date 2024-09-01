@@ -1,0 +1,290 @@
+/* Basic styles for the family tree */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f440;
+    background-image: url(/Devs_Portfolio/Portfolio_Template_html5up-verti/GenusTreeLink_Folder/GenusTreeLink_Images/AITreeGenerated.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#family-tree {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.node {
+    background-color: #edd72e00;
+    border: 1px solid #fd7272;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 10px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    position: relative;
+}
+
+.node-content {
+    margin-bottom: 10px;
+}
+
+.node-image {
+
+    width: 80px; /* Adjust size as needed */
+    height: 80px; /* Adjust size as needed */
+    border-radius: 50%; /* Makes image circular */
+    margin-bottom: 10px;
+    object-fit: cover; /* Ensures the image covers the space */
+}
+
+.children {
+    display: none; /* Hide children by default */
+    margin-top: 10px;
+    position: relative;
+}
+
+.show {
+    display: flex;
+}
+
+button.toggle-children {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button.toggle-children:hover {
+    background-color: #0056b3;
+}
+
+/* Nav */
+
+#nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0.9em;
+}
+
+    #nav ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+        #nav ul li {
+            float: left;
+            line-height: 4.5em;
+            padding-left: 1.5em;
+        }
+
+            #nav ul li a, #nav ul li span {
+                -moz-transition: background-color .25s ease-in-out;
+                -webkit-transition: background-color .25s ease-in-out;
+                -ms-transition: background-color .25s ease-in-out;
+                transition: background-color .25s ease-in-out;
+                font-weight: 800;
+                letter-spacing: 0.025em;
+                color: #fb4141;
+                text-decoration: none;
+                border-radius: 6px;
+                padding: 0.5em 1em 0.5em 1em;
+            }
+
+            #nav ul li > ul {
+                display: none;
+            }
+
+            #nav ul li:hover a, #nav ul li:hover span {
+                background: #fff;
+            }
+
+            #nav ul li.active a, #nav ul li.active span {
+                background: #fff;
+            }
+
+            #nav ul li.current a {
+                background: #fb4141;
+                color: #fff;
+            }
+
+.dropotron {
+    background: #fff;
+    letter-spacing: 0.025em;
+    color: #696969;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 0.75em 0;
+    min-width: 15em;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0.25em 0.25em 0.1em rgba(0, 0, 0, 0.025);
+    margin-top: calc(-0.75em + 1px);
+    margin-left: -1px;
+    list-style: none;
+    padding-left: 0;
+}
+
+    .dropotron li {
+        border-top: solid 1px #eee;
+        line-height: 3em;
+        padding-left: 0;
+    }
+
+        .dropotron li:first-child {
+            border-top: 0;
+        }
+
+        .dropotron li > a, .dropotron li > span {
+            -moz-transition: color .25s ease-in-out, background-color .25s ease-in-out;
+            -webkit-transition: color .25s ease-in-out, background-color .25s ease-in-out;
+            -ms-transition: color .25s ease-in-out, background-color .25s ease-in-out;
+            transition: color .25s ease-in-out, background-color .25s ease-in-out;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            padding: 0 1.5em;
+        }
+
+            .dropotron li > a:hover, .dropotron li > span:hover {
+                background: #eee;
+            }
+
+        .dropotron li.active > a, .dropotron li.active > span {
+            background: #eee;
+        }
+
+    .dropotron.level-0 {
+        font-size: 0.8em;
+        margin-left: 1.5em;
+        margin-top: 0;
+    }
+
+        .dropotron.level-0:before {
+            content: '';
+            position: absolute;
+            top: -0.5em;
+            left: 1em;
+            border-bottom: solid 0.75em #ffffff;
+            border-left: solid 0.75em transparent;
+            border-right: solid 0.75em transparent;
+            z-index: 1;
+        }
+
+/* Line connectors */
+.node::before, .node::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    background-color: #000;
+    left: 50%;
+}
+
+.node::before {
+    top: 100%;
+    height: 20px; /* Distance between nodes */
+    transform: translateX(-50%);
+}
+
+.node::after {
+    top: 100%;
+    height: 20px;
+    width: 20px; /* Width of the horizontal connector */
+    transform: translateX(-50%);
+}
+
+.children {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    margin-top: 20px; /* Space between parent and children */
+}
+
+.children .node {
+    margin: 0 20px;
+}
+
+.node + .node::before {
+    display: none;
+}
+
+.children::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    top: 50%;
+    left: 0;
+}
+
+
+/* Existing styles */
+
+button.add-child {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #ffc107;
+    color: black;
+    cursor: pointer;
+}
+
+button.add-child:hover {
+    background-color: #e0a800;
+}
+
+#add-ancestor-form {
+    margin-top: 20px;
+}
+
+#add-ancestor-form input {
+    display: block;
+    margin: 5px 0;
+    padding: 8px;
+    width: 200px;
+}
+
+#add-ancestor-form button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#add-ancestor-form button:hover {
+    background-color: #0056b3;
+}
+
+button.delete-node {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #dc3545;
+    color: white;
+    cursor: pointer;
+}
+button.delete-node:hover {
+    background-color: #c82333;
+}

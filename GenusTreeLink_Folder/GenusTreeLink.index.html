@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Tree</title>
+    <link rel="stylesheet" href="/Devs_Portfolio/Portfolio_Template_html5up-verti/GenusTreeLink_Folder/GenusTreeLink.Css">
+
+</head>
+<body>
+
+<!-- Nav -->
+    <nav id="nav">
+        <ul>
+            <li class="current"><a href="/Devs_Portfolio/Portfolio_Template_html5up-verti/Devs_Portfolio.index.html">Welcome</a></li>
+            <li>
+                <a href="#">Function Loading...</a>
+                <ul>
+                    <li><a href="#">link 1</a></li>
+                    <li><a href="#">link 2</a></li>
+                    <li>
+                        <a href="#">Link 3</a>
+                        <ul>
+                            <li><a href="#">SubLink 1</a></li>
+                            <li><a href="#">SubLink 2</a></li>
+                            <li><a href="#">SubLink 3</a></li>
+                            <li><a href="#">SubLink 4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Link 4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+</header>
+</div>
+
+    <div class="container">
+        <h1>GenusTreeLink</h1>
+        <div id="family-tree">
+            <div class="node" id="grandparent">
+                <div class="node-content">
+                    <img src="https://img.icons8.com/quill/100/name.png" href="https://icons8.com/icon/16cSlppPLXYA/avatar" alt="Grandparent" class="node-image">
+                    <h2>Grandparent</h2>
+                    <p>Born: 1855</p>
+                    <p>Died: 1980</p>
+                </div>
+                <button class="toggle-children">Show Children</button>
+                <button class="view-profile" data-name="Grandparent">View Profile</button>
+                <button class="add-child" data-parent="grandparent">Add Child</button>
+                <button class="delete-node">Delete</button>
+                <div class="children" id="grandparent-children">
+                    <!-- Parent nodes with profile buttons -->
+                </div>
+            </div>
+        </div>
+        <!-- Form to add new ancestors -->
+        <div id="add-ancestor-form" style="display: none;">
+            <h3>Add New Ancestor</h3>
+            <input type="text" id="ancestor-name" placeholder="Ancestor Name">
+            <input type="text" id="ancestor-birth" placeholder="Year of Birth">
+            <input type="text" id="ancestor-death" placeholder="Year of Death (if applicable)">
+            <button id="submit-ancestor">Add Ancestor</button>
+        </div>
+    </div>
+    <script src="/Devs_Portfolio/Portfolio_Template_html5up-verti/GenusTreeLink_Folder/GenusTreeLink.js"></script>
+</body>
+</html>
