@@ -1,0 +1,78 @@
+body{
+    background-image: url(/Subunit1-2+Scratchpad/modern-compass-without-needle-hi.png);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-position-x:65%;
+    background-position-y;
+
+}
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #000, #333, #666, #999, #ccc);
+}
+
+#clock {
+    width: 10px; /* Adjust the width as needed */
+    height: 500px; /* Adjust the height as needed */
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    margin: 0 auto; /* Centers the div horizontally */
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transform: rotate(45deg);
+    animation: pulse 1s infinite;
+}
+
+#countdown {
+
+    font-family: 'Dancing Script', cursive;
+    font-size: 35px;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    text-align: center;
+    transform: rotate(0deg);
+
+}
+
+input[type="datetime-local"] {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+}
+
+button {
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0% {
+        transform: rotate(45deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
