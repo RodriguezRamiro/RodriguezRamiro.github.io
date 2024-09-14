@@ -7,6 +7,11 @@ body{
     background-position-y;
 
 }
+.title {
+	text-align: right;
+	color:#fff;
+  }
+
 .clock-container {
     display: flex;
     flex-direction: column;
@@ -129,7 +134,7 @@ button {
 
 				#nav ul li.current a {
 					background: #444;
-					color: #fff;
+					color: #696969;
 				}
 
 	.dropotron {
