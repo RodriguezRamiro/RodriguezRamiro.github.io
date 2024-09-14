@@ -30,20 +30,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
-	.indented-paragraph {
-		text-indent: 30px; /* Adjust the value to control the size of the indent */
-	  }
-
 }
-
-.grid-layout {
-	display: grid;
-	grid-template-columns: 1fr 1fr; /* Two equal columns */
-	gap: 20px; /* Space between columns */
-  }
-
-
-
 
 ol, ul {
 	list-style: none;
@@ -98,21 +85,7 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
-	body {
-		background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
-		background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
-		background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
-		background-image: linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
-		background-color: #f7f7f7;
-		background-position: top left, top left;
-		background-repeat: repeat-x, repeat;
-		background-size: 100% 30em, auto;
-		font-family: 'Open Sans', sans-serif;
-		font-size: 13pt;
-		color: #696969;
-		font-weight: 300;
-		line-height: 2.25em;
-	}
+
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
@@ -1603,7 +1576,7 @@ input, select, textarea {
 		.image img {
 			display: block;
 			width: 100%;
-			border-radius: 8px;
+			border-radius: 100px;
 		}
 
 		.image.fit {
@@ -1749,14 +1722,7 @@ input, select, textarea {
 		ol li {
 			padding-left: 0.25em;
 		}
-		.grid-columns {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr); /* Number of columns */
-			gap: 20px; /* Space between columns */
-			list-style-type: none; /* Remove default bullets */
-			padding: 0; /* Remove default padding */
-			margin: 0; /* Remove default margin */
-		  }
+
 /* Actions */
 
 	ul.actions {
@@ -1956,7 +1922,7 @@ input, select, textarea {
 		display: inline-block;
 	}
 	img {
-		border-radius: 200px
+		border-radius: 0px
 	}
 		#logo h1 {
 			background: gold;
@@ -2008,10 +1974,11 @@ input, select, textarea {
 					-ms-transition: background-color .25s ease-in-out;
 					transition: background-color .25s ease-in-out;
 					font-weight: 800;
+                    font-size: 150%;
 					letter-spacing: 0.025em;
-					color: #696969;
+					color: #fff;
 					text-decoration: none;
-					border-radius: 6px;
+					border-radius: 20px;
 					padding: 0.5em 1em 0.5em 1em;
 				}
 
@@ -2020,7 +1987,7 @@ input, select, textarea {
 				}
 
 				#nav ul li:hover a, #nav ul li:hover span {
-					background: #fff;
+					background: #444;
 				}
 
 				#nav ul li.active a, #nav ul li.active span {

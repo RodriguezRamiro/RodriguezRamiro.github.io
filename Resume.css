@@ -30,20 +30,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
-	.indented-paragraph {
-		text-indent: 30px; /* Adjust the value to control the size of the indent */
-	  }
-
 }
-
-.grid-layout {
-	display: grid;
-	grid-template-columns: 1fr 1fr; /* Two equal columns */
-	gap: 20px; /* Space between columns */
-  }
-
-
-
 
 ol, ul {
 	list-style: none;
@@ -1749,14 +1736,7 @@ input, select, textarea {
 		ol li {
 			padding-left: 0.25em;
 		}
-		.grid-columns {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr); /* Number of columns */
-			gap: 20px; /* Space between columns */
-			list-style-type: none; /* Remove default bullets */
-			padding: 0; /* Remove default padding */
-			margin: 0; /* Remove default margin */
-		  }
+
 /* Actions */
 
 	ul.actions {
