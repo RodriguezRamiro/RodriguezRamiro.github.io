@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/templates/static/style.css">
+    <title>Expense Tracker</title>
+</head>
+<!-- Nav -->
+<nav id="nav">
+    <ul>
+        <li class="current"><a href="/index.html">Home</a></li>
+
+            <li><a href="/Resume.html">Resume</a></li>
+            <li><a href="/FizzBuzz_Folder/fizzbuzzgame.html">FizzBuzz</a></li>
+            <li><a href="/PythonApp/templates/add_expense.html">Python Expense Report</a></li>
+            <!--<ul>
+                <li><a href="#">Creative Desing Portfolio</a></li>
+                <li><a href="#">Professional Resume</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">More</a>
+                    <ul>
+                        <li><a href="#">SubLink 1</a></li>
+                        <li><a href="#">SubLink 2</a></li>
+                        <li><a href="#">SubLink 3</a></li>
+                        <li><a href="#">SubLink 4</a></li>
+                    </ul></li>
+            </ul> -->
+        <li><a href="/21blackjack-app/public/index.html">Play BlackJack</a></li>
+        <li><a href="/sidplayclock/sidplayclock.html">Set A CountDown</a></li>
+
+    </ul>
+</nav>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        <a href="/add">Add Expense</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for expense in expenses %}
+                <tr>
+                    <td>{{ expense.description }}</td>
+                    <td>{{ expense.amount }}</td>
+                    <td>{{ expense.category }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <!-- Pie chart for expense distribution -->
+        <h2>Expense Distribution by Category</h2>
+        <canvas id="expenseChart" width="400" height="200"></canvas>
+        <script>
+            var ctx = document.getElementById('expenseChart').getContext('2d');
+            var expenseChart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: {{ categories | safe }},
+                    datasets: [{
+                        label: 'Expenses by Category',
+                        data: {{ amounts | safe }},
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                }
+            });
+        </script>
+    </div>
+    <!-- Add Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

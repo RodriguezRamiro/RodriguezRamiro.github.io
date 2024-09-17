@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/PythonApp/templates/static/style.css">
+    <title>Add Expense</title>
+</head>
+<!-- Nav -->
+<nav id="nav">
+    <ul>
+        <li class="current"><a href="/index.html">Home</a></li>
+
+            <li><a href="/Resume.html">Resume</a></li>
+            <li><a href="/FizzBuzz_Folder/fizzbuzzgame.html">FizzBuzz</a></li>
+            <!--<ul>
+                <li><a href="#">Creative Desing Portfolio</a></li>
+                <li><a href="#">Professional Resume</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">More</a>
+                    <ul>
+                        <li><a href="#">SubLink 1</a></li>
+                        <li><a href="#">SubLink 2</a></li>
+                        <li><a href="#">SubLink 3</a></li>
+                        <li><a href="#">SubLink 4</a></li>
+                    </ul></li>
+            </ul> -->
+        <li><a href="/21blackjack-app/public/index.html">Play BlackJack</a></li>
+        <li><a href="/sidplayclock/sidplayclock.html">Set A CountDown</a></li>
+
+    </ul>
+</nav>
+<body>
+    <div class="container">
+        <h1>Add a New Expense</h1>
+        <form action="/add" method="POST">
+            <label for="description">Description</label>
+            <input type="text" name="description" required>
+
+            <label for="amount">Amount</label>
+            <input type="number" name="amount" step="0.01" required>
+
+            <label for="category">Category</label>
+            <select name="category" required>
+                <option value="Food">Food</option>
+                <option value="Bills">Bills</option>
+                <option value="Entertainment">Entertainment</option>
+            </select>
+
+            <button type="submit">Add Expense</button>
+        </form>
+    </div>
+</body>
+</html>
