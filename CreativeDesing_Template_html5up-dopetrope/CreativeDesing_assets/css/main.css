@@ -1588,6 +1588,7 @@ input, select, textarea {
 			left: 1.75em;
 			top: 1.75em;
 			margin: -4.5em 0 4.25em -3.5em;
+			border-radius: 90px;
 		}
 
 		.box.post header {
@@ -2773,18 +2774,21 @@ input, select, textarea {
 		/* Box */
 
 			.box {
-				padding: 25px 15px 20px 15px;
+				padding: 25px 15px 20px 10px;
 			}
 
 				.box .image.featured {
+					border-radius: 50%;
 					left: 15px;
 					top: 15px;
 					margin: -40px 0 40px -30px;
+
 				}
 
 				.box.post header {
 					padding-top: 0;
 					margin: 0 0 1em 0;
+
 				}
 
 				.box.post h2 {
