@@ -1,0 +1,17 @@
+CREATE DATABASE expense_db;
+
+CREATE TABLE expenses (
+    id SERIAL PRIMARY KEY,
+    amount DECIMAL(10, 2) NOT NULL,
+    category VARCHAR(50),
+    description TEXT,
+    date DATE
+);
+
+
+INSERT INTO expenses (amount, category, description, date) VALUES
+(25.50, 'Food', 'Lunch at the café', '2024-09-01'),
+(75.00, 'Utilities', 'Electricity bill', '2024-09-02'),
+(15.00, 'Entertainment', 'Movie ticket', '2024-09-03'),
+(50.00, 'Transportation', 'Gas for the car', '2024-09-04'),
+(120.00, 'Rent', 'Monthly apartment rent', '2024-09-05');
