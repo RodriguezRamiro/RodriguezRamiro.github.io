@@ -6,34 +6,20 @@
     <link rel="stylesheet" href="/PythonApp/templates/static/style.css">
     <title>Add Expense</title>
 </head>
-<!-- Nav -->
-<nav id="nav">
-    <ul>
-        <li class="current"><a href="/index.html">Home</a></li>
-
-            <li><a href="/Resume.html">Resume</a></li>
-            <li><a href="/FizzBuzz_Folder/fizzbuzzgame.html">FizzBuzz</a></li>
-            <!--<ul>
-                <li><a href="#">Creative Desing Portfolio</a></li>
-                <li><a href="#">Professional Resume</a></li>
-                <li><a href="#">Link 3</a></li>
-                <li><a href="#">More</a>
-                    <ul>
-                        <li><a href="#">SubLink 1</a></li>
-                        <li><a href="#">SubLink 2</a></li>
-                        <li><a href="#">SubLink 3</a></li>
-                        <li><a href="#">SubLink 4</a></li>
-                    </ul></li>
-            </ul> -->
-        <li><a href="/21blackjack-app/public/index.html">Play BlackJack</a></li>
-        <li><a href="/sidplayclock/sidplayclock.html">Set A CountDown</a></li>
-
-    </ul>
-</nav>
 <body>
+    <!-- Nav -->
+    <nav id="nav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/resume">Resume</a></li>
+            <li><a href="/fizzbuzz">FizzBuzz</a></li>
+            <li><a href="/blackjack">Play BlackJack</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
         <h1>Add a New Expense</h1>
-        <form action="/add" method="POST">
+        <form id="expense-form" method="POST">
             <label for="description">Description</label>
             <input type="text" name="description" required>
 
@@ -47,8 +33,40 @@
                 <option value="Entertainment">Entertainment</option>
             </select>
 
-            <button type="submit">Add Expense</button>
+            <button type="submit" id="submit-button">Add Expense</button>
+
         </form>
+
+        <h2>Expense Report Demo</h2>
+        <table id="expense-report">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lunch</td>
+                    <td>$15.00</td>
+                    <td>Food</td>
+                </tr>
+                <tr>
+                    <td>Electric Bill</td>
+                    <td>$100.00</td>
+                    <td>Bills</td>
+                </tr>
+                <tr>
+                    <td>Movie Tickets</td>
+                    <td>$30.00</td>
+                    <td>Entertainment</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+
+    <!-- Link to external script -->
+    <script src="/PythonApp/templates/static/script.js"></script>
 </body>
 </html>

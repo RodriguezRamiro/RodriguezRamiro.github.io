@@ -31,7 +31,7 @@ table {
 }
 
 table, th, td {
-    border: 1px solid#4c4faf;
+    border: 1px solid #4c4faf;
 }
 
 th, td {
@@ -41,6 +41,7 @@ th, td {
 
 th {
     background-color: #4c4faf;
+    color: white;
 }
 
 /* Form Styles */
@@ -67,6 +68,11 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+
+button.loading {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
 
 
